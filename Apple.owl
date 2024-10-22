@@ -80,6 +80,30 @@
     
 
 
+    <!-- http://www.semanticweb.org/ontologies/apple#ObjectProperty5 -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/apple#ObjectProperty5">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has part</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/apple#ObjectProperty6 -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/apple#ObjectProperty6">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has species</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/apple#ObjectProperty7 -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/apple#ObjectProperty7">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has quality</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -94,17 +118,34 @@
     <!-- http://www.semanticweb.org/ontologies/apple#Class1 -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/ontologies/apple#Class1">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Apple</rdfs:label>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class11"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Apple Cultivar</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/apple#Class123"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty1"/>
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class1"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty6"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class110"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty5"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/apple#Class111"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class11"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -118,8 +159,32 @@
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/apple#Class1"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class12"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty5"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/apple#Class111"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class12"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty5"/>
+                                <owl:someValuesFrom>
+                                    <owl:Class>
+                                        <owl:intersectionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/apple#Class117"/>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty7"/>
+                                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class119"/>
+                                            </owl:Restriction>
+                                        </owl:intersectionOf>
+                                    </owl:Class>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -133,8 +198,18 @@
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/apple#Class1"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class12"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty5"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/apple#Class111"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class12"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -148,8 +223,18 @@
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/apple#Class1"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class12"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty5"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/apple#Class111"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class12"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -169,14 +254,24 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty1"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class3"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty5"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/apple#Class111"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class12"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class12"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty1"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class3"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -191,19 +286,29 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty1"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class3"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty1"/>
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class65"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class12"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty1"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class3"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty5"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/apple#Class111"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class12"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -217,8 +322,18 @@
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/apple#Class1"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class13"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty5"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/apple#Class111"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class13"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -232,8 +347,18 @@
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/apple#Class1"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class12"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty5"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/apple#Class111"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class12"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -259,8 +384,18 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class12"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty5"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/apple#Class111"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class12"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -274,8 +409,18 @@
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/apple#Class1"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class12"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty5"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/apple#Class111"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class12"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -295,8 +440,18 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class12"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty5"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/apple#Class111"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class12"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -332,6 +487,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/ontologies/apple#Class11">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Apple Role</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/apple#Class123"/>
     </owl:Class>
     
 
@@ -340,6 +496,100 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/ontologies/apple#Class110">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Malus domestica</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/apple#Class123"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/apple#Class111 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/apple#Class111">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Apple Fruit</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/apple#Class123"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty7"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class96"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty5"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class115"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/apple#Class112 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/apple#Class112">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Apple Shape</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/apple#Class96"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/apple#Class113 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/apple#Class113">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Apple Flavour</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/apple#Class96"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/apple#Class114 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/apple#Class114">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Apple Colour</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/apple#Class96"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/apple#Class115 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/apple#Class115">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Apple Fruit Part</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/apple#Class123"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/apple#Class116 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/apple#Class116">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Apple Flesh</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/apple#Class115"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/apple#Class117 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/apple#Class117">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Apple Skin</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/apple#Class115"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/apple#Class118 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/apple#Class118">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Apple Texture</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/apple#Class96"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/apple#Class119 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/apple#Class119">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Russetting</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/apple#Class118"/>
     </owl:Class>
     
 
@@ -349,6 +599,41 @@
     <owl:Class rdf:about="http://www.semanticweb.org/ontologies/apple#Class12">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dessert Role</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/apple#Class11"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/apple#Class120 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/apple#Class120">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Round Shape</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/apple#Class112"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/apple#Class121 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/apple#Class121">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Elongated Shape</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/apple#Class112"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/apple#Class122 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/apple#Class122">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Flattened Shape</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/apple#Class112"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/apple#Class123 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/apple#Class123">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Domain Entity</rdfs:label>
     </owl:Class>
     
 
@@ -370,19 +655,29 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty1"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class51"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class12"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class19"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty1"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class19"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class51"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty5"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/apple#Class111"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class12"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -396,20 +691,28 @@
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/apple#Class1"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class12"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty5"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/apple#Class111"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class12"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class13"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty1"/>
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class1"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class13"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -423,8 +726,18 @@
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/apple#Class1"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class12"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty5"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/apple#Class111"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class12"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -444,8 +757,18 @@
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/apple#Class1"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class12"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty5"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/apple#Class111"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class12"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -459,8 +782,18 @@
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/apple#Class1"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class12"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty5"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/apple#Class111"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class12"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -474,8 +807,18 @@
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/apple#Class1"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class12"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty5"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/apple#Class111"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class12"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -495,12 +838,6 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class12"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty1"/>
                 <owl:someValuesFrom>
                     <owl:Class>
@@ -509,6 +846,26 @@
                             <owl:Class>
                                 <owl:complementOf rdf:resource="http://www.semanticweb.org/ontologies/apple#Class3"/>
                             </owl:Class>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty5"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/apple#Class111"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class12"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty7"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class120"/>
+                            </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
                 </owl:someValuesFrom>
@@ -525,8 +882,18 @@
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/apple#Class1"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class13"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty5"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/apple#Class111"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class13"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -538,12 +905,6 @@
     <owl:Class rdf:about="http://www.semanticweb.org/ontologies/apple#Class21">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Allington Pippin</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/apple#Class1"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class12"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty1"/>
@@ -558,8 +919,22 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class13"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty5"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/apple#Class111"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class12"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class13"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -573,8 +948,18 @@
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/apple#Class1"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class13"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty5"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/apple#Class111"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class13"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -588,8 +973,18 @@
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/apple#Class1"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class12"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty5"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/apple#Class111"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class12"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -603,8 +998,18 @@
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/apple#Class1"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class13"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty5"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/apple#Class111"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class13"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -618,8 +1023,18 @@
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/apple#Class1"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class73"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty5"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/apple#Class111"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class73"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -633,8 +1048,18 @@
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/apple#Class1"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class73"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty5"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/apple#Class111"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class73"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -648,8 +1073,18 @@
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/apple#Class1"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class73"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty5"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/apple#Class111"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class73"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -663,8 +1098,18 @@
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/apple#Class1"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class13"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty5"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/apple#Class111"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class13"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -678,8 +1123,18 @@
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/apple#Class1"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class13"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty5"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/apple#Class111"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class13"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -693,8 +1148,22 @@
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/apple#Class1"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class12"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty5"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/apple#Class111"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class12"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty7"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class120"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -708,8 +1177,18 @@
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/apple#Class1"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class73"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty5"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/apple#Class111"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class73"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -723,8 +1202,18 @@
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/apple#Class1"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class12"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty5"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/apple#Class111"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class12"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -738,8 +1227,18 @@
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/apple#Class1"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class12"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty5"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/apple#Class111"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class12"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -753,8 +1252,18 @@
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/apple#Class1"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class12"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty5"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/apple#Class111"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class12"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -768,8 +1277,18 @@
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/apple#Class1"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class73"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty5"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/apple#Class111"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class73"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -783,8 +1302,18 @@
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/apple#Class1"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class73"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty5"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/apple#Class111"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class73"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -798,8 +1327,18 @@
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/apple#Class1"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class12"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty5"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/apple#Class111"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class12"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -813,8 +1352,18 @@
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/apple#Class1"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class73"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty5"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/apple#Class111"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class73"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -828,8 +1377,18 @@
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/apple#Class1"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class12"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty5"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/apple#Class111"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class12"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -849,8 +1408,18 @@
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/apple#Class1"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class13"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty5"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/apple#Class111"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class13"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -862,6 +1431,46 @@
     <owl:Class rdf:about="http://www.semanticweb.org/ontologies/apple#Class4">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ashmead Kernel</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/apple#Class1"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty1"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class97"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty5"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/apple#Class111"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class12"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty5"/>
+                                <owl:someValuesFrom>
+                                    <owl:Class>
+                                        <owl:intersectionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/apple#Class117"/>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty7"/>
+                                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class119"/>
+                                            </owl:Restriction>
+                                        </owl:intersectionOf>
+                                    </owl:Class>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty7"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class120"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty1"/>
@@ -877,18 +1486,6 @@
                 </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class12"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty1"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class97"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -900,8 +1497,18 @@
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/apple#Class1"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class73"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty5"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/apple#Class111"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class73"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -915,20 +1522,30 @@
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/apple#Class1"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty1"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class101"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class12"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty5"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/apple#Class111"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class12"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty1"/>
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class3"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty1"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class101"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -942,8 +1559,18 @@
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/apple#Class1"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class12"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty5"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/apple#Class111"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class12"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -957,8 +1584,18 @@
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/apple#Class1"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class12"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty5"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/apple#Class111"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class12"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -972,8 +1609,18 @@
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/apple#Class1"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class73"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty5"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/apple#Class111"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class73"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -987,8 +1634,18 @@
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/apple#Class1"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class12"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty5"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/apple#Class111"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class12"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1002,8 +1659,18 @@
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/apple#Class1"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class13"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty5"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/apple#Class111"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class13"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1017,20 +1684,26 @@
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/apple#Class1"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class13"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class12"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class73"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty5"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/apple#Class111"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class12"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class13"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class73"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1044,8 +1717,18 @@
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/apple#Class1"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class13"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty5"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/apple#Class111"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class13"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1059,8 +1742,18 @@
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/apple#Class1"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class13"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty5"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/apple#Class111"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class13"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1074,8 +1767,18 @@
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/apple#Class1"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class13"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty5"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/apple#Class111"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class13"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1089,8 +1792,18 @@
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/apple#Class1"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class73"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty5"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/apple#Class111"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class73"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1116,14 +1829,22 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class12"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class13"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty5"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/apple#Class111"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class12"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class13"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1137,8 +1858,18 @@
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/apple#Class1"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class12"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty5"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/apple#Class111"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class12"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1152,8 +1883,18 @@
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/apple#Class1"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class73"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty5"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/apple#Class111"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class73"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1167,8 +1908,18 @@
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/apple#Class1"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class12"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty5"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/apple#Class111"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class12"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1194,8 +1945,18 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class12"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty5"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/apple#Class111"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class12"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1209,8 +1970,18 @@
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/apple#Class1"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class13"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty5"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/apple#Class111"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class13"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1224,8 +1995,18 @@
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/apple#Class1"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class12"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty5"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/apple#Class111"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class12"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1245,14 +2026,24 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class13"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty1"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class39"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty1"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class39"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty5"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/apple#Class111"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class13"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1266,14 +2057,22 @@
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/apple#Class1"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class12"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class13"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty5"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/apple#Class111"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class12"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class13"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1288,19 +2087,29 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty1"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class100"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty1"/>
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class3"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class12"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty1"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class100"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty5"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/apple#Class111"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class12"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1314,26 +2123,34 @@
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/apple#Class1"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class13"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty1"/>
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class58"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class12"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty1"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class15"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty1"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class15"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty5"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/apple#Class111"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class12"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class13"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1347,8 +2164,18 @@
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/apple#Class1"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class12"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty5"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/apple#Class111"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class12"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1362,14 +2189,22 @@
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/apple#Class1"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class13"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class12"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty5"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/apple#Class111"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class12"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class13"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1383,8 +2218,18 @@
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/apple#Class1"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class73"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty5"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/apple#Class111"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class73"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1398,8 +2243,18 @@
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/apple#Class1"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class12"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty5"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/apple#Class111"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class12"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1413,8 +2268,18 @@
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/apple#Class1"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class12"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty5"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/apple#Class111"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class12"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1428,8 +2293,18 @@
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/apple#Class1"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class73"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty5"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/apple#Class111"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class73"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1443,8 +2318,18 @@
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/apple#Class1"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class12"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty5"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/apple#Class111"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class12"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1458,20 +2343,26 @@
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/apple#Class1"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class13"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class12"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class73"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty5"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/apple#Class111"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class12"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class13"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class73"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1485,8 +2376,18 @@
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/apple#Class1"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class12"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty5"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/apple#Class111"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class12"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1500,14 +2401,24 @@
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/apple#Class1"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class13"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty1"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class1"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty1"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class1"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty5"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/apple#Class111"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class13"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1521,8 +2432,18 @@
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/apple#Class1"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class73"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty5"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/apple#Class111"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class73"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1536,8 +2457,18 @@
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/apple#Class1"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class73"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty5"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/apple#Class111"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class73"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1551,14 +2482,22 @@
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/apple#Class1"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class13"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class12"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty5"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/apple#Class111"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class12"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class13"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1583,8 +2522,18 @@
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/apple#Class1"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
-                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class12"/>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty5"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/apple#Class111"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
+                                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class12"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -1602,8 +2551,18 @@
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/apple#Class1"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
-                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class13"/>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty5"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/apple#Class111"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
+                                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class13"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -1621,8 +2580,18 @@
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/apple#Class1"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
-                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class73"/>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty5"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/apple#Class111"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
+                                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class73"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -1654,8 +2623,18 @@
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/apple#Class1"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class12"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty5"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/apple#Class111"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class12"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1669,8 +2648,8 @@
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/apple#Class1"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class12"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty1"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class16"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1681,8 +2660,18 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty1"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class16"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty5"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/apple#Class111"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class12"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1696,8 +2685,18 @@
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/apple#Class1"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class12"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty5"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/apple#Class111"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class12"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1711,8 +2710,18 @@
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/apple#Class1"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class12"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty5"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/apple#Class111"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class12"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1726,12 +2735,6 @@
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/apple#Class1"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class12"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty1"/>
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class3"/>
             </owl:Restriction>
@@ -1740,6 +2743,22 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty1"/>
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class14"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty5"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/apple#Class111"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class12"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1753,8 +2772,18 @@
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/apple#Class1"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class12"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty5"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/apple#Class111"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class12"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1768,6 +2797,22 @@
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/apple#Class1"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty5"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/apple#Class111"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class12"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty1"/>
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class14"/>
             </owl:Restriction>
@@ -1776,12 +2821,6 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty1"/>
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class82"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class12"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1795,8 +2834,18 @@
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/apple#Class1"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class12"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty5"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/apple#Class111"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class12"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1811,19 +2860,29 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty1"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class14"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class12"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class84"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty1"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class84"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class14"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty5"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/apple#Class111"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class12"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1837,8 +2896,18 @@
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/apple#Class1"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class12"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty5"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/apple#Class111"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class12"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1852,14 +2921,24 @@
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/apple#Class1"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty1"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class86"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty5"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/apple#Class111"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class12"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class12"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty1"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class86"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1879,8 +2958,18 @@
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/apple#Class1"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class12"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty5"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/apple#Class111"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class12"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1895,19 +2984,29 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty1"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class14"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty1"/>
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class88"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class12"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty1"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class14"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty5"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/apple#Class111"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class12"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1921,8 +3020,18 @@
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/apple#Class1"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class12"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty5"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/apple#Class111"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class12"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1936,14 +3045,24 @@
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/apple#Class1"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty4"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class14"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty5"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/apple#Class111"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class12"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class12"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty4"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class14"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1957,14 +3076,24 @@
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/apple#Class1"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty4"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class14"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty5"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/apple#Class111"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class12"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class12"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty4"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class14"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -2035,8 +3164,18 @@
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/apple#Class1"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class12"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty5"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/apple#Class111"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class12"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -2046,18 +3185,8 @@
     <!-- http://www.semanticweb.org/ontologies/apple#Class96 -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/ontologies/apple#Class96">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lord Lambourne Cross</rdfs:label>
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/apple#Class1"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty1"/>
-                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class14"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Apple Quality</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/apple#Class123"/>
     </owl:Class>
     
 
@@ -2069,8 +3198,18 @@
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/apple#Class1"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class12"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty5"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/apple#Class111"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class12"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -2084,20 +3223,30 @@
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/apple#Class1"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class12"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty1"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class3"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty5"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/apple#Class111"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class12"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty1"/>
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class62"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty1"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class3"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -2111,8 +3260,18 @@
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/apple#Class1"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class12"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty5"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/apple#Class111"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/apple#ObjectProperty2"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/apple#Class12"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
